@@ -1,0 +1,145 @@
+body {
+   margin: 0;
+}
+header {
+   display: flex;
+   padding: 20px;
+   align-items: center;
+   justify-content: space-between;
+   position: fixed;
+   left: 0;
+   right: 0;
+   top: 0;
+}
+header .logo {
+   font-size: 23px;
+   font-weight: bold;
+   font-family: cursive;
+
+}
+header .menu {
+   width: 30px;
+   height: 20px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+header .menu-line {
+   height: 3px;
+   background-color: #333;
+
+}
+
+/* sections */
+
+
+.container {
+   display: flex;
+   height: 100vh;
+   
+}
+.container .leftside {
+   flex: 1;
+   background-color: #fff;
+   display: flex;
+   align-items: center;
+   padding: 0 20px;
+
+}
+.container .rightside {
+   flex: 1;
+   background-color: yellow;
+   background-image: url(../images/geison.png);
+   background-size: 151% auto;
+   background-position: center bottom;
+}
+.container .info{
+   color: #333;
+}
+.container .info .profession {
+   font-weight: bold;
+   font-size: 22px;
+   text-transform: uppercase;
+   color: yellow;
+   text-shadow: 0px 0px 5px #333;
+   font-family: cursive;
+}
+.container .info .name {
+   font-weight: bold;
+   font-size: 100px;
+   margin-top: 10px;
+   margin-bottom: 30px;
+   font-family: cursive;
+   
+}
+.container .info .buttons a {
+   display: inline-block;
+   background-color: yellow;
+   color: #333;
+   padding: 20px 40px;
+   font-size: 20px;
+   font-family: cursive;
+   text-decoration: none;
+   text-transform: uppercase;
+   font-weight: bold;
+   box-shadow: 0px 0px 8px #111;
+   border-radius: 5px;
+   margin-right: 10px;
+}
+.container .info .buttons a.light {
+   color: #333;
+   background-color: #fff;
+}
+.container .info .buttons a:hover {
+   opacity: 0.8;
+}
+
+
+footer {
+   position: fixed;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   padding: 20px;
+   color: #333;
+   font-size: 13px;
+}
+
+/* responsividade */
+
+@media (max-width: 850px){
+   header {
+      position: initial;
+      background-color: yellow;
+   }
+   .container {
+      flex-direction: column;
+   }
+   .container .leftside {
+      flex: none;
+      padding: 30px 20px;
+      justify-content: center;
+      text-align: center;
+   }
+   .container .info .name {
+      font-size: 50px;
+      
+   }
+   footer {
+      position: initial;
+      color: #333;
+      font-size: 16px;
+   }
+}
+@media (max-width:450px) {
+   .container .leftside .info .name {
+      font-size: 30px;
+   }
+   .container .leftside .info .buttons a {
+      display: block;
+      margin-right: 10;
+      margin-bottom: 15px;
+      font-size: 12px;
+
+   }
+}
